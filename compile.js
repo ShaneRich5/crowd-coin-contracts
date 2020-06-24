@@ -28,16 +28,20 @@ var input = {
 const output = JSON.parse(solc.compile(JSON.stringify(input)));
 const contractMap = output.contracts['campaign.sol'];
 
-console.log(output.contracts);
-
 fs.ensureDirSync(buildPath);
 
 for (let contractName in contractMap) {
-    console.log('contract:', contractName);
+    console.log(`Building contract ${contractName}...`);
     const contract = contractMap[contractName];
+    const abi = contract.abi;
+    const bytecode = contract.evm.bytecode.object;
 
     fs.outputJSONSync(
         path.resolve(buildPath, `${contractName}.json`),
-        contractMap[contractName]
+        {
+            abi,
+            bytecode,
+        }
     );
+    console.log(`Built contract ${contractName}!`);
 }
