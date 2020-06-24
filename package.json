@@ -1,0 +1,33 @@
+{
+  "name": "crowd-coin-contracts",
+  "version": "1.0.0",
+  "description": "Hosts the contracts for the Crowd Coin platform",
+  "main": "compile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaneRich5/crowd-coin-contracts.git"
+  },
+  "keywords": [
+    "ethereum",
+    "solidity",
+    "contracts"
+  ],
+  "author": "shane.richards121@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShaneRich5/crowd-coin-contracts/issues"
+  },
+  "homepage": "https://github.com/ShaneRich5/crowd-coin-contracts#readme",
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "solc": "^0.6.10",
+    "@truffle/hdwallet-provider": "^1.0.35",
+    "ganache-cli": "^6.9.1",
+    "mocha": "^7.2.0",
+    "truffle": "^5.1.27",
+    "web3": "^1.2.8"
+  }
+}
